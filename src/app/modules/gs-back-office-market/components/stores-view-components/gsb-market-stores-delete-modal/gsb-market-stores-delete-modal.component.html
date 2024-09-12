@@ -1,0 +1,15 @@
+<div class="delete-modal">
+  <h1 class="delete-modal__icon">
+    <mat-icon>delete</mat-icon>
+  </h1>
+  <p class="delete-modal__message">¿Seguro que desea eliminar esta tienda?</p>
+  
+  <div class="delete-modal__actions">
+    <button mat-button color="warn" class="delete-modal__button delete-modal__button--confirm" (click)="confirmDelete()">
+      Eliminar
+    </button>
+    <button mat-button class="delete-modal__button delete-modal__button--cancel" (click)="close()">
+      Cancelar
+    </button>
+  </div>
+</div>

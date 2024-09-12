@@ -1,0 +1,33 @@
+<div class="stores-info">
+  <h2 class="stores-info__title">Listado de tiendas</h2>
+
+  <div class="stores-info__header">
+    <gsb-market-stores-filter
+      class="stores-info__filter"
+      (filter)="onCategorySelected($event)"
+    ></gsb-market-stores-filter>
+
+    <!-- <button
+      mat-raised-button
+      color="accent"
+      (click)="openAddStoreForm()"
+      class="stores-info__add-button"
+    >
+      Agregar tienda
+    </button> -->
+  </div>
+
+  <gsb-market-stores-table
+    class="stores-info__table"
+    [stores]="stores"
+    (editStore)="openEditStoreForm($event)"
+    (deleteStore)="confirmDeleteStore($event)"
+  ></gsb-market-stores-table>
+
+  <mat-paginator
+    class="stores-info__paginator"
+    [length]="totalStores"
+    [pageSize]="10"
+    (page)="paginate($event)"
+  ></mat-paginator>
+</div>

@@ -1,0 +1,106 @@
+<table mat-table [dataSource]="stores" class="stores-table">
+  <!-- Columna Tiendas -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef class="stores-table__header-cell">
+      <span class="stores-table__header" (click)="sortBy('name')">
+        Tiendas
+        <mat-icon class="stores-table__sort-icon">
+          {{ sortDirection === "asc" ? "arrow_upward" : "arrow_downward" }}
+        </mat-icon>
+      </span>
+    </th>
+    <td
+      mat-cell
+      *matCellDef="let store"
+      class="stores-table__cell stores-table__cell--name"
+    >
+      <div class="stores-table__content">
+        <img
+          src="../../../../../../assets/icons/adidas-logo.png"
+          alt="Logo"
+          class="stores-table__logo"
+        />
+        <div class="stores-table__details">
+          <span class="stores-table__name">{{ store.name }}</span>
+          <span class="stores-table__category--mobile">{{
+            store.category
+          }}</span>
+
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef class="stores-table__header-cell">
+      Categoría
+    </th>
+    <td
+      mat-cell
+      *matCellDef="let store"
+      class="stores-table__cell stores-table__category"
+    >
+      {{ store.category }}
+    </td>
+  </ng-container>
+
+  <!-- Columna Acciones -->
+  <ng-container matColumnDef="actions">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      class="stores-table__header-cell"
+    ></th>
+    <td
+      mat-cell
+      *matCellDef="let store"
+      class="stores-table__cell stores-table__actions"
+    >
+      <button
+        mat-icon-button
+        (click)="onEdit(store)"
+        class="stores-table__edit-button"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        (click)="onDelete(store)"
+        class="stores-table__delete-button"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+
+      <!-- Botón de tres puntos para pantallas pequeñas -->
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        class="stores-table__menu-button"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <!-- Menú desplegable -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onEdit(store)">
+          <mat-icon>edit</mat-icon> Editar
+        </button>
+        <button mat-menu-item (click)="onDelete(store)">
+          <mat-icon>delete</mat-icon> Eliminar
+        </button>
+      </mat-menu>
+    </td>
+  </ng-container>
+
+  <tr
+    mat-header-row
+    *matHeaderRowDef="['name', 'category', 'actions']"
+    class="stores-table__header-row"
+  ></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: ['name', 'category', 'actions']"
+    class="stores-table__row"
+  ></tr>
+</table>

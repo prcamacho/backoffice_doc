@@ -1,0 +1,582 @@
+<div class="gsb-marketplace__info-container">
+  <h2 class="gsb-marketplace__info-container-title">
+    {{ "GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.TITLE" | translate }}
+  </h2>
+  <mat-tab-group
+    #tabGroup
+    (selectedTabChange)="onTabChange($event)"
+    mat-stretch-tabs
+    [disableRipple]="true"
+    [animationDuration]="'0ms'"
+  >
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{
+          "GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.BASIC-INFORMATION"
+            | translate
+        }}
+      </ng-template>
+      <form>
+        <div class="gsb-marketplace__form">
+          <h6 class="gsb-marketplace__form-formTitle">
+            {{
+              "GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.BASIC-INFORMATION"
+                | translate
+            }}
+          </h6>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.MARKETPLACE-NAME"
+              | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.MARKETPLACE-NAME-INPUT'
+                  | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.OWNER-NAME"
+              | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.OWNER-NAME-INPUT'
+                  | translate
+              "
+            />
+          </mat-form-field>
+        </div>
+        <div class="gsb-marketplace__form-submit">
+          <button mat-raised-button color="primary">
+            {{
+              "GSB-MARKETPLACE.MARKETPLACE.MARKETPLACE-INFO.SAVE-CHANGES"
+                | translate
+            }}
+          </button>
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{ "GSB-MARKETPLACE.MARKETPLACE.CONTACT.TITLE" | translate }}
+      </ng-template>
+      <form>
+        <div class="gsb-marketplace__form">
+          <h6 class="gsb-marketplace__form-formTitle">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.CONTACT.TITLE" | translate }}
+          </h6>
+          <mat-label>
+            {{
+              "GSB-MARKETPLACE.MARKETPLACE.CONTACT.ADDRESS" | translate
+            }}</mat-label
+          >
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.CONTACT.ADDRESS-INPUT' | translate
+              "
+            />
+          </mat-form-field>
+          <div class="gsb-marketplace__form-map">
+            <gsb-market-map
+              [address]="address"
+              [isMapTabActive]="isMapTabActive"
+            ></gsb-market-map>
+          </div>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.CONTACT.EMAIL" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.CONTACT.EMAIL-INPUT' | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.CONTACT.PHONE" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.CONTACT.PHONE-INPUT' | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.CONTACT.WEB-SITE" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.CONTACT.WEB-SITE-INPUT' | translate
+              "
+            />
+          </mat-form-field>
+        </div>
+        <div class="gsb-marketplace__form-submit">
+          <button mat-raised-button color="primary">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.CONTACT.SAVE-CHANGES" | translate }}
+          </button>
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{ "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.TITLE" | translate }}
+      </ng-template>
+      <form>
+        <div class="gsb-marketplace__form">
+          <h6 class="gsb-marketplace__form-formTitle">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.TITLE" | translate }}
+          </h6>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.FACEBOOK" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.FACEBOOK-INPUT'
+                  | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.INSTAGRAM" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.INSTAGRAM-INPUT'
+                  | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.X" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.X-INPUT' | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.TIKTOK" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.TIKTOK-INPUT'
+                  | translate
+              "
+            />
+          </mat-form-field>
+          <mat-label>{{
+            "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.YOUTUBE" | translate
+          }}</mat-label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              [placeholder]="
+                'GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.YOUTUBE-INPUT'
+                  | translate
+              "
+            />
+          </mat-form-field>
+        </div>
+        <div class="gsb-marketplace__form-submit">
+          <button mat-raised-button color="primary">
+            {{
+              "GSB-MARKETPLACE.MARKETPLACE.SOCIAL-MEDIA.SAVE-CHANGES"
+                | translate
+            }}
+          </button>
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{ "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.TITLE" | translate }}
+      </ng-template>
+      <form (ngSubmit)="onSubmit()">
+        <div class="gsb-marketplace__form">
+          <h6 class="gsb-marketplace__form-formTitle">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.TITLE" | translate }}
+          </h6>
+          <table class="gsb-marketplace__schedule-table">
+            <tr *ngFor="let day of days" class="gsb-marketplace__schedule-row">
+              <td class="gsb-marketplace__day-name">{{ day }}</td>
+              <td class="gsb-marketplace__day-times">
+                <mat-form-field
+                  appearance="outline"
+                  class="gsb-marketplace__field-opening"
+                >
+                  <mat-label>Apertura</mat-label>
+                  <mat-select
+                    [(ngModel)]="schedule[day].open"
+                    name="open-{{ day }}"
+                  >
+                    <mat-option *ngFor="let time of times" [value]="time">{{
+                      time
+                    }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field
+                  appearance="outline"
+                  class="gsb-marketplace__field-closing"
+                >
+                  <mat-label>Cierre</mat-label>
+                  <mat-select
+                    [(ngModel)]="schedule[day].close"
+                    name="close-{{ day }}"
+                  >
+                    <mat-option *ngFor="let time of times" [value]="time">{{
+                      time
+                    }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+
+          <div class="gsb-marketplace__specialDays">
+            <button mat-button (click)="addSpecialDay()">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#C340AF" />
+              </svg>
+              <span class="gsb-marketplace__form-formTitle">
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.ADD-SPECIAL-DAYS"
+                    | translate
+                }}
+              </span>
+            </button>
+          </div>
+
+          <div *ngFor="let specialDay of specialDays" class="special-day-block">
+            <div class="special-day-controls">
+              <mat-form-field
+                appearance="outline"
+                class="gsb-marketplace__field-date"
+              >
+                <mat-label>{{
+                  "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.DATE" | translate
+                }}</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  [(ngModel)]="specialDay.date"
+                  name="date-{{ specialDay.id }}"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+              <mat-checkbox
+                [(ngModel)]="specialDay.closed"
+                name="closed-{{ specialDay.id }}"
+              >
+                {{ "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.CLOSED" | translate }}
+              </mat-checkbox>
+              <div class="delete-trash-can">
+                <img
+                  src="../../../../../../assets/icons/trash-can.svg"
+                  class="gsb-marketplace__icon-trash"
+                />
+                <button
+                  mat-button
+                  (click)="removeSpecialDay(specialDay.id)"
+                  class="gsb-marketplace__button-remove"
+                >
+                  <span class="gsb-marketplace__remove-text">{{
+                    "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.DELETE" | translate
+                  }}</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="special-day-times">
+              <mat-form-field
+                appearance="outline"
+                class="gsb-marketplace__field-opening"
+              >
+                <mat-label>{{
+                  "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.OPENING" | translate
+                }}</mat-label>
+                <mat-select
+                  [(ngModel)]="specialDay.open"
+                  name="open-{{ specialDay.id }}"
+                  [disabled]="specialDay.closed"
+                >
+                  <mat-option *ngFor="let time of times" [value]="time">{{
+                    time
+                  }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field
+                appearance="outline"
+                class="gsb-marketplace__field-closing"
+              >
+                <mat-label>{{
+                  "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.CLOSING" | translate
+                }}</mat-label>
+                <mat-select
+                  [(ngModel)]="specialDay.close"
+                  name="close-{{ specialDay.id }}"
+                  [disabled]="specialDay.closed"
+                >
+                  <mat-option *ngFor="let time of times" [value]="time">{{
+                    time
+                  }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <div class="gsb-marketplace__form-submit">
+          <button mat-raised-button color="primary">
+            {{
+              "GSB-MARKETPLACE.MARKETPLACE.SCHEDULE.SAVE-CHANGES" | translate
+            }}
+          </button>
+        </div>
+      </form>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{ "GSB-MARKETPLACE.MARKETPLACE.PICTURES.TITLE" | translate }}
+      </ng-template>
+      <form>
+        <div class="gsb-marketplace__form">
+          <h6 class="gsb-marketplace__form-formTitle">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.PICTURES.TITLE" | translate }}
+          </h6>
+          <h6 class="gsb-marketplace__form-picture-title">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.PICTURES.LOGO" | translate }}
+          </h6>
+          <div
+            class="drop-zone__logo"
+            (drop)="onDrop($event, 'logo')"
+            (dragover)="onDragOver($event)"
+            (dragleave)="onDragLeave($event)"
+          >
+            <div class="drop-zone__svg-logo">
+              <img src="../../../../../../assets/icons/image-upload.svg" />
+            </div>
+            <div class="drop-zone__upload-logo-caption">
+              <p class="drop-zone__upload-mobile">
+                <span
+                  class="drop-zone__upload-trigger-mobile"
+                  (click)="triggerFileInput('banner')"
+                >
+                  {{
+                    "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.UPLOAD"
+                      | translate
+                  }}
+                </span>
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.IMAGE-HERE"
+                    | translate
+                }}
+              </p>
+              <p class="drop-zone__upload-desktop">
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.DRAG"
+                    | translate
+                }}{{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.OR"
+                    | translate
+                }}
+                <span
+                  class="drop-zone__upload-trigger-desktop"
+                  (click)="triggerFileInput('banner')"
+                >
+                  {{
+                    "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.UPLOAD-LOWER"
+                      | translate
+                  }}
+                </span>
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.IMAGE-HERE"
+                    | translate
+                }}
+              </p>
+              <p>
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.ADMITED-FORMATS"
+                    | translate
+                }}
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.FORMATS"
+                    | translate
+                }}
+              </p>
+            </div>
+            <input
+              type="file"
+              id="logoInput"
+              (change)="onFileSelected($event, 'logo')"
+              accept=".png,.jpg,.jpeg,.webp"
+              style="display: none"
+            />
+          </div>
+          <div *ngIf="logoFile">
+            <img
+              *ngIf="logoFile.type.startsWith('image/')"
+              [src]="logoFile.url"
+              [alt]="logoFile.name"
+              [style.width.px]="logoFile.width"
+              [style.height.px]="logoFile.height"
+            />
+          </div>
+          <div class="drop-zone__logo-caption">
+            <p>
+              {{
+                "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.LOGO-MAXIMUM-WEIGHT"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.LOGO-MAXIMUM-SIZE"
+                  | translate
+              }}
+            </p>
+          </div>
+          <h6 class="gsb-marketplace__form-picture-title">
+            {{ "GSB-MARKETPLACE.MARKETPLACE.PICTURES.BANNER" | translate }}
+          </h6>
+          <div
+            class="drop-zone__banner"
+            (drop)="onDrop($event, 'banner')"
+            (dragover)="onDragOver($event)"
+            (dragleave)="onDragLeave($event)"
+          >
+            <div class="drop-zone__svg-banner">
+              <img src="../../../../../../assets/icons/image-upload.svg" />
+            </div>
+            <div class="drop-zone__upload-banner-caption">
+              <p class="drop-zone__upload-mobile">
+                <span
+                  class="drop-zone__upload-trigger-mobile"
+                  (click)="triggerFileInput('banner')"
+                >
+                  {{
+                    "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.UPLOAD"
+                      | translate
+                  }}
+                </span>
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.IMAGE-HERE"
+                    | translate
+                }}
+              </p>
+              <p class="drop-zone__upload-desktop">
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.DRAG"
+                    | translate
+                }}{{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.OR"
+                    | translate
+                }}
+                <span
+                  class="drop-zone__upload-trigger-desktop"
+                  (click)="triggerFileInput('banner')"
+                >
+                  {{
+                    "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.UPLOAD-LOWER"
+                      | translate
+                  }}
+                </span>
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.IMAGE-HERE"
+                    | translate
+                }}
+              </p>
+              <p>
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.ADMITED-FORMATS"
+                    | translate
+                }}
+                {{
+                  "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.FORMATS"
+                    | translate
+                }}
+              </p>
+            </div>
+            <input
+              type="file"
+              id="bannerInput"
+              (change)="onFileSelected($event, 'banner')"
+              accept=".png,.jpg,.jpeg,.webp"
+              style="display: none"
+            />
+          </div>
+          <div *ngIf="bannerFile">
+            <img
+              *ngIf="bannerFile.type.startsWith('image/')"
+              [src]="bannerFile.url"
+              [alt]="bannerFile.name"
+              [style.width.px]="bannerFile.width"
+              [style.height.px]="bannerFile.height"
+            />
+          </div>
+          <div class="drop-zone__banner-caption">
+            <p>
+              {{
+                "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.BANNER-MAXIMUM-WEIGHT"
+                  | translate
+              }}
+            </p>
+            <p>
+              {{
+                "GSB-MARKETPLACE.MARKETPLACE.PICTURES.UPLOAD-CAPTION.BANNER-MAXIMUM-SIZE"
+                  | translate
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="gsb-marketplace__form-submit">
+          <button mat-raised-button color="primary">
+            {{
+              "GSB-MARKETPLACE.MARKETPLACE.PICTURES.SAVE-CHANGES" | translate
+            }}
+          </button>
+        </div>
+      </form>
+    </mat-tab>
+
+    <mat-tab [disabled]="true"></mat-tab>
+    <mat-tab [disabled]="true"></mat-tab>
+    <mat-tab [disabled]="true"></mat-tab>
+  </mat-tab-group>
+</div>

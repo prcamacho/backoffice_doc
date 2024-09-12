@@ -1,0 +1,105 @@
+{
+  "GSB-MARKETPLACE": {
+    "TITLE": "Gestión del marketplace",
+    "DASHBOARD": {
+      "TITLE": "Dashboard"
+    },
+    "MARKETPLACE": {
+      "TITLE": {
+        "TITLE": "Marketplace"
+      },
+      "MARKETPLACE-INFO": {
+        "TITLE": "Información del Marketplace",
+        "BASIC-INFORMATION": "Información Básica",
+        "MARKETPLACE-NAME": "Nombre del Marketplace",
+        "MARKETPLACE-NAME-INPUT": "Ingrese el nombre del marketplace",
+        "OWNER-NAME": "Nombre del Propietario",
+        "OWNER-NAME-INPUT": "Ingrese el nombre del propietario",
+        "SAVE-CHANGES": "Guardar cambios"
+      },
+      "CONTACT": {
+        "TITLE": "Contacto",
+        "ADDRESS": "Dirección",
+        "ADDRESS-INPUT": "Ingrese Dirección",
+        "PHONE": "Whatsapp",
+        "PHONE-INPUT": "Ingrese número Whatsapp",
+        "EMAIL": "Email",
+        "EMAIL-INPUT": "Ingrese el email",
+        "WEB-SITE": "Sitio web",
+        "WEB-SITE-INPUT": "Ingrese el sitio web",
+        "SAVE-CHANGES": "Guardar cambios"
+      },
+      "SOCIAL-MEDIA": {
+        "TITLE": "Redes Sociales",
+        "FACEBOOK": "Facebook",
+        "FACEBOOK-INPUT": "Facebook",
+        "INSTAGRAM": "Instagram",
+        "INSTAGRAM-INPUT": "Instagram",
+        "X": "X (Twitter)",
+        "X-INPUT": "X (Twitter)",
+        "TIKTOK": "Tiktok",
+        "TIKTOK-INPUT": "Tiktok",
+        "YOUTUBE": "YouTube",
+        "YOUTUBE-INPUT": "YouTube",
+        "SAVE-CHANGES": "Guardar cambios"
+      },
+      "SCHEDULE": {
+        "TITLE": "Horarios de apertura",
+        "MONDAY": "Lunes",
+        "TUESDAY": "Martes",
+        "WEDNESDAY": "Miércoles",
+        "THURSDAY": "Jueves",
+        "FRIDAY": "Viernes",
+        "SATURDAY": "Sabado",
+        "SUNDAY": "Domingo",
+        "ADD-SPECIAL-DAYS": "Agregar días especiales",
+        "SAVE-CHANGES": "Guardar cambios",
+        "DATE": "Fecha",
+        "OPENING": "Apertura",
+        "CLOSING": "Cierre",
+        "CLOSED": "Cerrado",
+        "DELETE": "Eliminar"
+      },
+      "PICTURES": {
+        "TITLE": "Imágenes",
+        "SAVE-CHANGES": "Guardar cambios",
+        "LOGO": "Logo",
+        "BANNER": "Banner",
+        "UPLOAD-CAPTION": {
+          "DRAG": "Arrastre",
+          "OR": " o ",
+          "UPLOAD-LOWER": "suba",
+          "UPLOAD": "Suba",
+          "IMAGE-HERE": "la imagen aquí",
+          "ADMITED-FORMATS": "Formatos admitidos:",
+          "FORMATS": "JPG, JPEG, PNG o WEBP",
+          "LOGO-MAXIMUM-WEIGHT": "Tamaño de la imagen máx: 1 M",
+          "LOGO-MAXIMUM-SIZE": "Dimensiones máx: 500x500px",
+          "BANNER-MAXIMUM-WEIGHT": "Tamaño de la imagen: 10 M",
+          "BANNER-MAXIMUM-SIZE": "Dimensiones máx: 1920x400px"
+        }
+      }
+    },
+    "STORES": {
+      "TITLE": "Tiendas"
+    },
+    "CATEGORIES": {
+      "TITLE": "Categorías"
+    },
+    "CLIENTS": {
+      "TITLE": "Clientes"
+    },
+    "PURCHASES": {
+      "TITLE": "Compras"
+    },
+    "STATS": {
+      "TITLE": "Estadísticas"
+    },
+    "BANNERS": {
+      "TITLE": "Banners"
+    },
+    "EXIT": {
+      "TITLE": "Salir"
+    }
+  }
+}

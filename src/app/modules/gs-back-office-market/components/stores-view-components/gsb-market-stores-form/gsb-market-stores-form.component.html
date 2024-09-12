@@ -1,0 +1,31 @@
+<div class="stores-form">
+  <h1 class="stores-form__title">{{ data ? 'Editar Tienda' : 'Agregar Tienda' }}</h1>
+
+  <mat-form-field appearance="outline" class="stores-form__field">
+    <mat-label>Nombre de la tienda</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="stores-form__field">
+    <mat-label>Categoría principal</mat-label>
+    <mat-select formControlName="category">
+      <mat-option *ngFor="let category of ['Indumentaria deportiva', 'Ropa', 'Tecnología']" [value]="category">
+        {{ category }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="stores-form__field">
+    <mat-label>Email del propietario</mat-label>
+    <input matInput formControlName="ownerEmail" type="email">
+  </mat-form-field>
+
+  <div class="stores-form__actions">
+    <button mat-raised-button color="primary" class="stores-form__button stores-form__button--submit">
+      Guardar Cambios
+    </button>
+    <button mat-raised-button color="warn" (click)="onCancel()" class="stores-form__button stores-form__button--cancel">
+      Cancelar
+    </button>
+  </div>
+</div>

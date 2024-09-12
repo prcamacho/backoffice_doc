@@ -1,0 +1,112 @@
+.app-most-viewed-products {
+  width: 640px;
+  background-color: #ffff;
+  margin-left: 4rem;
+  margin-top: 1rem;
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+  @media (max-width: 700px) {
+    margin: auto;
+    margin-top: 2rem;
+  }
+  &__title {
+    margin-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__table {
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+    @media(max-width: 700px) {
+      width: 100%;
+
+
+    }
+    &-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      margin-right: 8px;
+    }
+    &-thead {
+      font-family: Inter;
+      font-size: 12px;
+      font-weight: 600;
+      color:#667085;
+      @media(max-width: 700px) {
+        display: none;
+      }
+     /* th {
+      padding-right: 5rem
+      } */
+    };
+    &-tbody {
+      &--tr {
+        @media(max-width: 700px) {
+           border-radius: 30px;
+
+        }
+      }
+      &--tr td{
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+        padding: 0.5rem;
+       // padding: 8px, 24px, 8px, 24px
+
+      };
+      &--tr th{
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+      };
+      &--tdProduct {
+        display: flex;
+        align-items: center;
+        padding: 8px, 24px, 8px, 24px;
+        @media (max-width: 700px) {
+          padding: auto;
+        }
+      };
+      &--tdProduct span {
+        font-size: 12px;
+        font-weight: 700;
+      }
+      &--thCategories {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+      &--thView {
+      margin-left: auto;
+      padding:8px, 24px, 8px, 24px;
+    };
+      @media(max-width: 1100px) {
+      &--thModified {
+        display: none
+      }
+    }
+    }
+
+  }
+  &__pagination {
+    display: flex;
+justify-content: flex-end;
+  }
+
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  border-radius: 8px;
+  background: #C340AF;
+}
+
+.odds {
+  background-color: #EAECF0;
+}

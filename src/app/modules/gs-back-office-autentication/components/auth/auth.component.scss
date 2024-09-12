@@ -1,0 +1,249 @@
+.login-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(75.52deg, #c340af 0%, #e46ad2 97.18%);
+}
+
+.login-close {
+  display: flex;
+  justify-content: flex-end;
+}
+.login-close svg {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.img-login-background {
+  width: 555px;
+  height: 596px;
+  background-image: url("../../../../../assets/img/logo/aa282d71cab140bac7fba75ceecfbaa2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0px;
+  position: absolute;
+  z-index: 1;
+  left: 30%;
+}
+
+
+.img-elipse-one {
+  box-sizing: border-box;
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  left: 33%;
+  top: 159px;
+  border-radius: 250px;
+  background-color: #c8c8f5;
+  z-index: 0;
+}
+
+.img-elipse-two {
+  box-sizing: border-box;
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  left: 31%;
+  top: 129px;
+  border: 1px solid #905dcb;
+  border-radius: 250px;
+  z-index: 0;
+}
+
+.div-form-container {
+  position: absolute;
+  background: #ffff;
+  width: 450px;
+  height: 353px;
+  margin-top: 125px;
+ // margin-left: calc(100% - 65%);
+  margin-left: 35%;
+ z-index: 3;
+  border-radius: 20px;
+}
+
+.div-form-container .svg-logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.div-form-container svg,
+button {
+  display: flex;
+  margin: auto;
+
+}
+
+.div-form-container button {
+  width: 180px;
+  height: 43px;
+  top: 298px;
+  left: 146px;
+  padding: 12px 38px 12px 38px;
+  gap: 8px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  font-family: inter;
+  background-color: #c340af;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.login {
+  width: 372.79px;
+  height: 135.92px;
+  margin: auto;
+}
+
+.custom-form input {
+  width: 374px;
+  margin-top: 7px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: 1px solid #dcdbdd;
+}
+
+.login h4 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24.2px;
+  text-align: left;
+}
+
+input::placeholder {
+  color: #47464a;
+}
+
+.custom-form-footer .password-restart {
+  color: #47464a;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: center;
+  cursor: pointer;
+}
+.custom-form-password {
+  display: flex;
+}
+.custom-form-password svg {
+  width: 25px;
+  height: 24px;
+  margin-left: -37px;
+}
+.custom-form-footer-powered {
+  width: 230px;
+  display: flex;
+  margin: auto;
+
+}
+.custom-form-footer-powered .powered-by {
+  color: #47464a;
+  font-family: Lato;
+  font-size: 18px;
+  text-align: center;
+
+}
+.btn-login {
+  margin-top: 10px;
+}
+ .custom-form-footer-powered .svg-techforb-footer {
+  width: 128px;
+  margin-top: -2px;
+ }
+
+
+/*Media queries*/
+
+@media (max-width: 1060px) {
+
+  .img-login-background {
+    width: 555px;
+    height: 596px;
+    left: 30%;
+  }
+
+}
+
+
+@media (max-width: 980px) {
+  .login-container {
+    width: 970px;
+    height: 1200px;
+  }
+  .img-login-background {
+    width: 555px;
+    height: 596px;
+  }
+}
+@media (max-width: 800px) {
+  .login-container {
+    width: 870px;
+    height: 1200px;
+  }
+
+  .img-login-background {
+    left: 0px !important;
+    width: 870px;
+    height: 1100px !important;
+  }
+  .div-form-container {
+     width: 680px !important;
+     height: 800px !important;
+     margin-left: 110px;
+
+  }
+.svg-logo {
+  width: 400px !important;
+  height: 150px !important
+}
+.login h4 {
+font-size: 30px !important;
+ }
+ .login {
+  width: 600px !important;
+  height: 450px !important;
+ }
+ .custom-form input {
+  width: 580px !important;
+  margin-top: 10px;
+  height: 100px;
+ }
+ .div-form-container button {
+
+   margin-top: 30px !important;
+   width: 330px !important;
+   height: 106px;
+   font-size: 38px;
+   align-items: center;
+
+ }
+ input::placeholder {
+  font-size: 36px;
+ }
+ .custom-form-footer .powered-by {
+  font-size: 32px !important;
+  margin-top: 8px;
+ }
+ .custom-form-footer-powered {
+ width: 480px !important;
+ }
+ .custom-form-footer-powered .svg-techforb-footer  {
+  width: 280px !important;
+ }
+ .custom-form-footer .password-restart {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  font-size: 32px !important;
+ }
+ .custom-form-password svg {
+   width: 45px;
+   height: 44px;
+   margin-left: -46px;
+}
+}

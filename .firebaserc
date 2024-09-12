@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "react-native-developments",
+    "GoShopping BackOffice": "react-native-developments"
+  },
+  "targets": {
+    "techforb-invopay-dev": {
+      "hosting": {
+        "invopay": [
+          "techforb-invopay-dev"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "url" : "https://cencosud.invopay.tech.com/asklsd",
+        "name": "Cencosud SA",
+        "country": "Argentina",
+        "language": "es",
+        "currentType": "ARS",
+        "logo": ""
+    },
+    {
+        "url" : "https://empresa1.invopay.tech.com/asklsd",
+        "name": "Techforb",
+        "country": "Brasil",
+        "language": "pt",
+        "currentType": "USD",
+        "logo": ""
+    }
+]

@@ -1,0 +1,309 @@
+.categories {
+  padding: 1rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  /* Botón "Agregar" solo visible en escritorio */
+  &__add-button--desktop {
+    background-color: white;
+    color: #3f3f3f;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  /* Estilo para la cabecera móvil: "Ordenar" + "+Agregar" */
+  &__mobile-header {
+    display: none; /* Por defecto está oculto en pantallas grandes */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .categories__sort-btn {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #3f3f3f;
+
+      mat-icon {
+        margin-left: 0.25rem;
+      }
+    }
+
+    /* Texto clickeable "+ Agregar" en móviles */
+    .categories__add-button--mobile {
+      background: none;
+      border: none;
+      padding: 0;
+      color: #3f3f3f;
+      font-size: 16px;
+      font-weight: normal;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0.5rem;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+
+    .categories__icon-container {
+      display: flex;
+      align-items: center;
+
+      .categories__icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+    }
+
+    .categories__actions {
+      position: relative;
+    }
+
+    .categories__description {
+      font-size: 14px;
+      color: #667085;
+    }
+
+    .odd {
+      background-color: #f9f9f9;
+    }
+
+    .even {
+      background-color: white;
+    }
+  }
+
+  .categories__paginator {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+
+    p {
+      margin: 0;
+      color: #6f6f6f;
+      font-size: 14px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0 8px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .paginator__active {
+      background-color: #c340af;
+      color: white;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      font-size: 14px;
+      color: #6f6f6f;
+      margin: 0 8px;
+    }
+  }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 720px) {
+  .categories {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+
+      .categories__title {
+        margin-bottom: 0.5rem;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      /* Mostrar el encabezado "Ordenar" + "+Agregar" solo en móviles */
+      .categories__mobile-header {
+        display: flex;
+      }
+
+      /* Ocultar el botón de escritorio en móviles */
+      .categories__add-button--desktop {
+        display: none;
+      }
+    }
+
+    &__table {
+      display: block;
+
+      .categories__mobile-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+
+        .categories__icon {
+          flex-shrink: 0;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        .categories__name {
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        /* La descripción se mantiene debajo del nombre en móviles */
+        .categories__description {
+          font-size: 12px;
+          color: #667085;
+          margin-top: 0.25rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .categories__stores {
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+
+      /* Ocultar la columna de "Descripción" en móviles */
+      td.categories__description {
+        display: none;
+      }
+
+      .categories__actions {
+        position: relative;
+
+        .categories__mobile-actions {
+          display: flex;
+          justify-content: flex-end;
+
+          button {
+            position: relative;
+            z-index: 2;
+          }
+
+          .categories__dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 3;
+            padding: 0.5rem 0;
+            min-width: 150px;
+
+            button {
+              display: block;
+              width: 100%;
+              padding: 0.5rem;
+              text-align: left;
+              border: none;
+              background: none;
+              font-size: 14px;
+              color: #333;
+              cursor: pointer;
+            }
+
+            button:hover {
+              background-color: #f0f0f0;
+            }
+          }
+
+          /* Mostrar el menú cuando esté activo */
+          &.open .categories__dropdown {
+            display: block;
+          }
+        }
+
+        /* Ocultar acciones de escritorio en móviles */
+        .categories__desktop-actions {
+          display: none;
+        }
+      }
+    }
+
+    .categories__table thead {
+      display: none; /* Ocultar el encabezado de la tabla en móviles */
+    }
+  }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 721px) {
+  .categories {
+
+    &__mobile-header {
+      display: none;
+    }
+
+    &__add-button--desktop {
+      display: inline-block;
+    }
+
+    &__actions {
+      /* Mostrar acciones de escritorio */
+      .categories__desktop-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* Ocultar acciones móviles */
+      .categories__mobile-actions {
+        display: none;
+      }
+    }
+  }
+}

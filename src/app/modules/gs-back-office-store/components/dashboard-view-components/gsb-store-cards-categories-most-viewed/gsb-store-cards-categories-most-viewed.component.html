@@ -1,0 +1,20 @@
+<div class="cards-categories-most-viewed">
+  <h4 class="cards-categories-most-viewed__title">Productos más vistos</h4>
+  <ul *ngFor="let items of dataProductsMostView | paginate: { itemsPerPage: 10, currentPage: page }" class="cards-categories-most-viewed__ul">
+   <li class="cards-categories-most-viewed__li">
+    <div class="cards-categories-most-viewed__li-liGroup">
+    <img src="{{items.image}}" alt="" class="cards-categories-most-viewed__li-image">
+    <div class="cards-categories-most-viewed__li-pGroup">
+      <p class="cards-categories-most-viewed__li-p--products">{{items.producto}}</p>
+      <p class="cards-categories-most-viewed__li-p--categories">{{items.categoria}}</p>
+    </div>
+   </div>
+    <span class="cards-categories-most-viewed__li-span">
+      {{items.visualizaciones}}
+    </span>
+  </li>
+</ul>
+<div class="cards-categories-most-viewed__pagination">
+<pagination-controls (pageChange)="page = $event" previousLabel="anterior" nextLabel="posterior" class="my-pagination"></pagination-controls>
+</div>
+</div>

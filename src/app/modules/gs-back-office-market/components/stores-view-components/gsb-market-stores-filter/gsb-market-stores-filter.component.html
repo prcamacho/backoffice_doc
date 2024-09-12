@@ -1,0 +1,22 @@
+<div class="filter">
+  <form [formGroup]="filterForm" (ngSubmit)="onFilter()" class="filter__form">
+    <div class="filter__field-wrapper">
+      <mat-form-field class="filter__field filter__field--category" appearance="outline">
+        <mat-label class="filter__label">Categoría</mat-label>
+        <mat-select formControlName="category" class="filter__select" [disabled]="!hasStores">
+          <mat-option *ngFor="let category of categories" [value]="category" class="filter__option">
+            {{ category }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="filter__button-wrapper">
+      <button mat-raised-button [disabled]="!hasStores" type="submit" class="filter__button filter__button--submit">
+        Buscar
+      </button>
+    </div>
+  </form>
+
+  <!-- Texto clickeable para agregar tienda -->
+  <a (click)="onAddStore()" class="filter__add-store">+ Agregar tienda</a>
+</div>

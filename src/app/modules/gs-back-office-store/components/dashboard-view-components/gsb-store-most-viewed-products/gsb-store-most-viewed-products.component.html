@@ -1,0 +1,34 @@
+<div class="app-most-viewed-products">
+
+  <h4 class="app-most-viewed-products__title">Productos más vistos</h4>
+<table class="app-most-viewed-products__table" >
+  <thead class="app-most-viewed-products__table-thead">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Categoría</th>
+      <th scope="col">Visualizaciones</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let items of dataProductsMostView | paginate: { itemsPerPage: 10, currentPage: page }; let indice = index; let impar = odd; let par = even;" [ngClass]="{odds:par,verde:impar}"  class="app-most-viewed-products__table-tbody">
+    <tr class="app-most-viewed-products__table-tbody--tr">
+      <th class="app-most-viewed-products__table-tbody--th app-most-viewed-products__table-tbody--thModified">{{items.id}}</th>
+      <td class="app-most-viewed-products__table-tbody--td app-most-viewed-products__table-tbody--tdProduct">
+        <img src="{{items.image}}" class="app-most-viewed-products__table-image"alt="">
+        <span>{{items.producto}}</span>
+
+        </td>
+      <td class="app-most-viewed-products__table-tbody--td app-most-viewed-products__table-tbody--thCategories"> {{items.categoria}}</td>
+      <td class="app-most-viewed-products__table-tbody--td app-most-viewed-products__table-tbody--thView">{{items.visualizaciones}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="app-most-viewed-products__pagination">
+<pagination-controls (pageChange)="page = $event" previousLabel="anterior" nextLabel="posterior" class="my-pagination"></pagination-controls>
+</div>
+
+
+
+</div>
+
+

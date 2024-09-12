@@ -1,0 +1,53 @@
+.main-menu__container-svg {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center; /* Alineación vertical centrada */
+  justify-content: center; /* Alineación horizontal centrada */
+  cursor: pointer;
+  margin-left: 16px; /* Ajuste para mantener separación a la izquierda */
+}
+
+.gsb-header {
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center; /* Alinea el h3 y el menú de hamburguesa verticalmente */
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px; /* Asegura una altura consistente con el header */
+
+  &__header {
+    font-family: Inter;
+    font-size: 25px;
+    color: #3f3939;
+    margin-left: 16px; /* Espacio entre el h3 y el menú de hamburguesa */
+    display: flex;
+    align-items: center; /* Alinea verticalmente el h3 con el menú */
+  }
+
+  &__header-h3 {
+    font-size: 24px;
+    margin: 0; /* Asegura que no haya margen superior o inferior */
+  }
+
+  @media (max-width: 720px) {
+    .gsb-header__header-h3 {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 720px) and (max-width: 1100px) {
+    .gsb-header__header-h3 {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .main-menu__container-svg {
+      display: none; /* Oculta el menú de hamburguesa en pantallas grandes */
+    }
+  }
+}

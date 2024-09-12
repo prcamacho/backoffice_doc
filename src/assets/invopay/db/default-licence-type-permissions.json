@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "idLicenceType": 1,
+    "permissions": "{ maxInvopayUsers: 1, maxSubsidiaries: 0, maxProviders: 15, maxAdminProviders: 1, maxInvoicesPerMonth: 75, maxEmployees: 0, maxExpensesPerMonth: 0, auditComponentEnabled: false, smartErrorPrevention: false, fraudPreventionEnabled: false, premiumSupportEnabled: false }"
+  },
+  {
+    "id": 2,
+    "idLicenceType": 2,
+    "permissions": "{ maxInvopayUsers: 3, maxSubsidiaries: 0, maxProviders: 100, maxAdminProviders: 1, maxInvoicesPerMonth: 550, maxEmployees: 15, maxExpensesPerMonth: 45, auditComponentEnabled: false, smartErrorPrevention: false, fraudPreventionEnabled: false, premiumSupportEnabled: false }"
+  },
+  {
+    "id": 3,
+    "idLicenceType": 3,
+    "permissions": "{ auditComponentEnabled: true, smartErrorPrevention: false, fraudPreventionEnabled: false, premiumSupportEnabled: true }"
+  },
+  {
+    "id": 4,
+    "idLicenceType": 4,
+    "permissions": "{ auditComponentEnabled: true, smartErrorPrevention: true, fraudPreventionEnabled: true, premiumSupportEnabled: true }"
+  }
+]

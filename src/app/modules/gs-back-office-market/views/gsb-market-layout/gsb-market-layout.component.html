@@ -1,0 +1,23 @@
+<div class="gsb-marketplace-layout__container">
+  <div class="gsb-marketplace-layout__container-header">
+    <gsb-market-header (menuToggle)="toggleMenu()"></gsb-market-header>
+  </div>
+
+  <div class="gsb-marketplace-layout__container-main-content">
+    <div
+      class="gsb-marketplace-layout__container-main-content-menu"
+      [class.gsb-marketplace-layout__container-main-content-menu-open]="
+        isMenuOpen
+      "
+    >
+      <gsb-market-main-menu [isMenuOpen]="isMenuOpen" (menuClosed)="toggleMenu()"></gsb-market-main-menu>
+    </div>
+    <div class="gsb-marketplace-layout__container-main-content-router">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- <div class="gsb-marketplace-layout__container-footer">
+    <gsb-market-footer></gsb-market-footer>
+  </div> -->
+</div>

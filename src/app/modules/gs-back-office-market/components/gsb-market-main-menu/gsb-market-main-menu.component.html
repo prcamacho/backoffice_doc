@@ -1,0 +1,135 @@
+<div class="main-menu__container">
+  <ul class="main-menu__list" *ngIf="isMenuOpen">
+    <div class="main-menu__item-container" (click)="navigateTo('dashboard')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'dashboard'"
+          (click)="setActiveMenuItem('dashboard')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/dashboard.svg"
+            alt="Dashboard"
+          />
+          {{ "GSB-MARKETPLACE.DASHBOARD.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('marketplace')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'marketplace'"
+          (click)="setActiveMenuItem('marketplace')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/marketplace.svg"
+            alt="Marketplace"
+          />
+          {{ "GSB-MARKETPLACE.MARKETPLACE.TITLE.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('stores')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'stores'"
+          (click)="setActiveMenuItem('stores')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/stores.svg"
+            alt="Stores"
+          />
+          {{ "GSB-MARKETPLACE.STORES.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('categories')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'categories'"
+          (click)="setActiveMenuItem('categories')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/categories.svg"
+            alt="Categories"
+          />
+          {{ "GSB-MARKETPLACE.CATEGORIES.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('clients')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'clients'"
+          (click)="setActiveMenuItem('clients')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/clients.svg"
+            alt="Clients"
+          />
+          {{ "GSB-MARKETPLACE.CLIENTS.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('purchases')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'purchases'"
+          (click)="setActiveMenuItem('purchases')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/purchases.svg"
+            alt="Purchases"
+          />
+          {{ "GSB-MARKETPLACE.PURCHASES.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('stats')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'stats'"
+          (click)="setActiveMenuItem('stats')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/stats.svg"
+            alt="Stats"
+          />
+          {{ "GSB-MARKETPLACE.STATS.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container" (click)="navigateTo('banners')">
+      <a>
+        <li
+          class="main-menu__item"
+          [class.main-menu__item--active]="activeMenuItem === 'banners'"
+          (click)="setActiveMenuItem('banners')"
+        >
+          <img
+            src="../../../../../assets/icons/marketplace/banners.svg"
+            alt="Banners"
+          />
+          {{ "GSB-MARKETPLACE.BANNERS.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+    <div class="main-menu__item-container">
+      <a>
+        <li class="main-menu__item">
+          <img
+            src="../../../../../assets/icons/marketplace/exit.svg"
+            alt="Exit"
+          />
+          {{ "GSB-MARKETPLACE.EXIT.TITLE" | translate }}
+        </li>
+      </a>
+    </div>
+  </ul>
+</div>

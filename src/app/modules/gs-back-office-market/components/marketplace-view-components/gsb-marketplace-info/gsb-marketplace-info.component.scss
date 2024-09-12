@@ -1,0 +1,384 @@
+.mat-tab-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Se adapta a la altura disponible */
+}
+
+.mat-tab-label-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mat-tab-label {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .mat-tab-header-pagination {
+    display: none !important;
+  }
+
+  .mat-tab-label-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mat-tab-labels {
+    display: flex;
+    justify-content: flex-start !important;
+  }
+
+  .mat-tab-label-active {
+    scroll-snap-align: center;
+  }
+}
+
+.gsb-marketplace__schedule-table {
+  width: 100%;
+  border-spacing: 0 8px;
+}
+
+.gsb-marketplace__schedule-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gsb-marketplace__day-name {
+  width: 20%;
+  font-weight: bold;
+  text-align: left;
+}
+
+.gsb-marketplace__day-times {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 30%;
+
+  mat-form-field {
+    width: 48%;
+  }
+}
+
+@media (max-width: 720px) {
+  .gsb-marketplace__schedule-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gsb-marketplace__day-name {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .gsb-marketplace__day-times {
+    width: 100%;
+    gap: 8px;
+    display: flex;
+    justify-content: flex-start;
+
+    mat-form-field {
+      width: 30%;
+    }
+  }
+}
+
+.special-day-block {
+  margin-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.special-day-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.special-day-times {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  .gsb-marketplace__field-opening,
+  .gsb-marketplace__field-closing {
+    width: 45%;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}
+
+.gsb-marketplace__form-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  button {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  mat-form-field {
+    margin-bottom: 12px;
+  }
+}
+
+.gsb-marketplace__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 1.5rem 0.1rem; 
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  &-formTitle {
+    color: #c340af;
+    margin-top: 0;
+  }
+
+  &-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: stretch;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &-map {
+    height: 250px;
+    overflow: hidden;
+  }
+}
+
+.gsb-marketplace__specialDays {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  button {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    button {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .gsb-marketplace__info-container {
+    width: 100vw;
+    height: 85vh;
+  }
+
+  .gsb-marketplace__info-container-title {
+    font-size: 17px;
+  }
+
+  .gsb-marketplace__button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .gsb-marketplace__info-container {
+    width: 100vw;
+    height: 85vh;
+    padding: 20px;
+  }
+
+  .gsb-marketplace__button {
+    margin-top: 10px;
+  }
+
+  .gsb-marketplace__form-submit {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 1100px) {
+  .gsb-marketplace__info-container {
+    width: 100vw;
+    height: 80vh;
+    padding: 0 20px;
+  }
+
+  .drop-zone__upload-desktop {
+    display: none;
+  }
+
+  .gsb-marketplace__button {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .drop-zone__banner-caption,
+  .drop-zone__logo-caption {
+    align-self: flex-start;
+  }
+
+  .drop-zone__upload-mobile {
+    display: none;
+  }
+
+  .drop-zone__logo {
+    width: 20%;
+    align-self: flex-start;
+  }
+
+  .drop-zone__banner {
+    width: 100%;
+  }
+}
+
+/* Drop Zone Styles */
+.drop-zone__logo,
+.drop-zone__banner {
+  border: 2px dashed #c340af;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drop-zone__logo:hover,
+.drop-zone__banner:hover {
+  background-color: #f9e6f7;
+}
+
+.drop-zone__svg-logo,
+.drop-zone__svg-banner {
+  margin-bottom: 10px;
+}
+
+.drop-zone__upload-logo-caption,
+.drop-zone__upload-banner-caption {
+  text-align: center;
+}
+
+.drop-zone__upload-trigger-mobile,
+.drop-zone__upload-trigger-desktop {
+  color: #c340af;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.drop-zone__upload-trigger-mobile:hover,
+.drop-zone__upload-trigger-desktop:hover {
+  text-decoration: underline;
+}
+
+.drop-zone__upload-mobile {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .drop-zone__upload-desktop {
+    display: block;
+  }
+
+  .drop-zone__upload-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .drop-zone__upload-mobile {
+    display: block;
+  }
+
+  .drop-zone__upload-desktop {
+    display: none;
+  }
+}
+
+.gsb-marketplace__form-picture-title {
+  color: #c340af;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.special-day-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espacio entre los elementos */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.gsb-marketplace__button-remove {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el ícono y el texto */
+  gap: 8px; /* Espacio entre el ícono y el texto */
+  font-weight: bold;
+  color: #c340af;
+  cursor: pointer;
+
+  img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px; /* Mueve el ícono a la izquierda */
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.delete-trash-can {
+  display: flex;
+}
+
+.special-day-block {
+  margin-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.special-day-times {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  .gsb-marketplace__field-opening,
+  .gsb-marketplace__field-closing {
+    width: 45%;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.main-menu__container {
+  position: relative;
+  z-index: 10;
+  height: calc(100vh - 60px); /* Ajuste basado en la altura del header */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.main-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye las opciones uniformemente */
+}
+
+.main-menu__item-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
+  & a {
+    width: 100%;
+  }
+}
+
+.main-menu__item {
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  flex-grow: 1; /* Hace que las opciones ocupen espacio disponible */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.main-menu__item:hover,
+.main-menu__item--active {
+  background-color: #fdeefb;
+  width: 100%;
+}
+
+.main-menu__link {
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  color: #667085;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 720px) {
+  .main-menu__list {
+    justify-content: space-between; /* Distribuye uniformemente las opciones en pantallas pequeñas */
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+  }
+
+  .main-menu__item {
+    padding: 10px 15px; /* Ajusta el padding para pantallas más pequeñas */
+    flex-grow: 1; /* Asegura que las opciones ocupen espacio uniformemente */
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1100px) {
+  .main-menu__list {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1100px) {
+  .main-menu__container {
+    height: auto;
+    max-height: 1100px;
+    overflow: hidden;
+  }
+  .main-menu__list {
+    justify-content: space-between;
+    max-height: 100%;
+  }
+}
+
+.main-menu__item--border {
+  border-left: 3px solid #eaecf0;
+  border-radius: 0;
+}
+
+.main-menu__item--border:hover,
+.main-menu__item--border:active,
+.main-menu__item--border:focus {
+  border-left: 2px solid #c340af;
+}

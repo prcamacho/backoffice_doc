@@ -1,0 +1,96 @@
+:host {
+  @media (max-width: 720px) {
+    margin: auto;
+    margin-top: 1rem;
+    width: 90%;
+ }
+}
+
+.categories-most-viewed {
+  background-color: #ffff;
+  width: 300px;
+  height: 400px;
+  margin-left: 1.8rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px -2px #0000001A;
+
+  @media (max-width: 720px) {
+     margin-bottom: 1rem;
+     margin-left: 2rem;
+     margin-top: 1rem;
+     width: 90%;
+  }
+  &__title {
+    font-family: Inter;
+font-size: 18px;
+font-weight: 700;
+line-height: 21.78px;
+text-align: left;
+margin-left: 0.7rem;
+padding-top: 0.7rem;
+  };
+  &__chart {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+  }
+}
+
+/*
+.categories-most-viewed ::ng-deep .advanced-pie-legend-wrapper {
+  display: block;
+
+ }
+
+ .categories-most-viewed ::ng-deep .total-value {
+  display: none;
+ }
+ .categories-most-viewed ::ng-deep .advanced-pie-legend {
+  position: inherit;
+ }
+ .categories-most-viewed ::ng-deep .advanced-pie-legend .total-label {
+ display: none;
+}
+.categories-most-viewed ::ng-deep .advanced-pie-legend .legend-items-container .legend-items {
+  white-space: wrap;
+  overflow: inherit !important;
+}
+.categories-most-viewed ::ng-deep .item-value  {
+  display: none;
+}
+.categories-most-viewed ::ng-deep .item-percent {
+ display: none;
+}
+.categories-most-viewed ::ng-deep .item-color {
+  display: none;
+}
+*/
+
+.ngx-charts-outer {
+  width: 177px !important;
+  margin-top: -20px;
+}
+.chart-legend {
+  padding: 0;
+  width: auto !important;
+}
+.chart-legend .legend-labels {
+  background: #ffff !important;
+}
+.legend-labels {
+  font-family: Inter;
+  display:flex;
+  flex-wrap: wrap;
+}
+.chart-legend .legend-wrap {
+  margin-left: -1.5rem;
+  width: 120% !important;
+  background-color: #ffff !important;
+
+}
+.legend-title {
+  display: none;
+}
+

@@ -1,0 +1,365 @@
+<div class="main-menu-container">
+  <div class="main-menu-container-svg" (click)="showMainMenu()">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M4 6H20V8H4V6ZM4 11H20V13H4V11ZM4 16H20V18H4V16Z"
+        fill="#212121"
+      />
+    </svg>
+  </div>
+  <ul class="main-menu-list" *ngIf="openMainMenu">
+    <div (click)="navigateTo('dashboard')">
+      <a>
+        <li
+          class="main-menu-items"
+          [class.active]="activeMenuItem === 'dashboard'"
+          (click)="setActiveMenuItem('dashboard')"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+            <path
+              d="M22.6954 13.6324L17.1681 9.38954C16.4909 8.87015 15.5084 8.87015 14.8312 9.38954V9.38954L9.30455 13.6317C9.11055 13.7804 9 14.0004 9 14.2355V22.2185C9 22.6473 9.36971 23 9.82362 23H13.5295C13.9834 23 14.3531 22.6473 14.3531 22.2185V17.1658H17.6469V22.2185C17.6469 22.6473 18.0166 23 18.4705 23H22.1764C22.6303 23 23 22.6473 23 22.2185V14.2355C22.9993 14.0004 22.8887 13.7804 22.6954 13.6324Z"
+              stroke="#C340AF"
+              stroke-width="1.5"
+            />
+          </svg>
+          Dashboard
+        </li>
+      </a>
+    </div>
+    <div (click)="navigateTo('store')">
+      <a>
+        <li
+          class="main-menu-items"
+          [class.active]="activeMenuItem === 'store'"
+          (click)="setActiveMenuItem('store')"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+            <path
+              d="M9.25757 15.415V18.7825C9.25757 22.15 10.6076 23.5 13.9751 23.5H18.0176C21.3851 23.5 22.7351 22.15 22.7351 18.7825V15.415"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16.0001 16C17.3726 16 18.3851 14.8825 18.2501 13.51L17.7551 8.5H14.2526L13.7501 13.51C13.6151 14.8825 14.6276 16 16.0001 16Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20.7326 16C22.2476 16 23.3576 14.77 23.2076 13.2625L22.9976 11.2C22.7276 9.25 21.9776 8.5 20.0126 8.5H17.7251L18.2501 13.7575C18.3776 14.995 19.4951 16 20.7326 16Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M11.23 16C12.4675 16 13.585 14.995 13.705 13.7575L13.87 12.1L14.23 8.5H11.9425C9.97753 8.5 9.22753 9.25 8.95753 11.2L8.75503 13.2625C8.60503 14.77 9.71503 16 11.23 16Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 19.75C14.7475 19.75 14.125 20.3725 14.125 21.625V23.5H17.875V21.625C17.875 20.3725 17.2525 19.75 16 19.75Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          Tienda
+        </li>
+      </a>
+    </div>
+
+    <li
+      class="main-menu-items"
+      [class.active]="activeMenuItem === 'product-managment'"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      (click)="showMenu(); setActiveMenuItem('product-managment')"
+    >
+      <a>
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+          <path
+            d="M9.37744 12.5801L15.9999 16.4126L22.5774 12.6026"
+            stroke="#C340AF"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M16 23.2078V16.4053"
+            stroke="#C340AF"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14.4475 8.86L10.4425 11.0875C9.53497 11.59 8.79248 12.85 8.79248 13.885V18.1225C8.79248 19.1575 9.53497 20.4175 10.4425 20.92L14.4475 23.1475C15.3025 23.62 16.705 23.62 17.56 23.1475L21.565 20.92C22.4725 20.4175 23.215 19.1575 23.215 18.1225V13.885C23.215 12.85 22.4725 11.59 21.565 11.0875L17.56 8.86C16.6975 8.38 15.3025 8.38 14.4475 8.86Z"
+            stroke="#C340AF"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M19.7501 16.9302V14.1852L12.6326 10.0752"
+            stroke="#C340AF"
+            stroke-width="1.25"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        Gestión productos
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          *ngIf="openMenu == false"
+        >
+          <path
+            d="M14.1667 8.33333L10 12.5L5.83334 8.33333"
+            stroke="#C340AF"
+            stroke-opacity="0.5"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          *ngIf="openMenu == true"
+        >
+          <path
+            d="M5.83317 11.6667L9.99984 7.5L14.1665 11.6667"
+            stroke="#C340AF"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </li>
+
+    <ul class="dropdown-menu" #menuVisible>
+      <li>
+        <a class="dropdown-item main-menu-items main-menu-itemsBorder" href="#"
+          >Categorias</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item main-menu-items main-menu-itemsBorder" href="#"
+          >Productos</a
+        >
+      </li>
+    </ul>
+    <div (click)="navigateTo('clients')">
+      <a>
+        <li
+          class="main-menu-items"
+          [class.active]="activeMenuItem === 'clients'"
+          (click)="setActiveMenuItem('clients')"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+            <path
+              d="M20.5001 12.37C20.4551 12.3625 20.4026 12.3625 20.3576 12.37C19.3226 12.3325 18.4976 11.485 18.4976 10.435C18.4976 9.3625 19.3601 8.5 20.4326 8.5C21.5051 8.5 22.3676 9.37 22.3676 10.435C22.3601 11.485 21.5351 12.3325 20.5001 12.37Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19.7276 17.8301C20.7551 18.0026 21.8876 17.8226 22.6826 17.2901C23.7401 16.5851 23.7401 15.4301 22.6826 14.7251C21.8801 14.1926 20.7326 14.0126 19.7051 14.1926"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M11.4776 12.37C11.5226 12.3625 11.5751 12.3625 11.6201 12.37C12.6551 12.3325 13.4801 11.485 13.4801 10.435C13.4801 9.3625 12.6176 8.5 11.5451 8.5C10.4726 8.5 9.61011 9.37 9.61011 10.435C9.61761 11.485 10.4426 12.3325 11.4776 12.37Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12.2501 17.8301C11.2226 18.0026 10.0901 17.8226 9.29508 17.2901C8.23758 16.5851 8.23758 15.4301 9.29508 14.7251C10.0976 14.1926 11.2451 14.0126 12.2726 14.1926"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16.0001 17.9725C15.9551 17.965 15.9026 17.965 15.8576 17.9725C14.8226 17.935 13.9976 17.0875 13.9976 16.0375C13.9976 14.965 14.8601 14.1025 15.9326 14.1025C17.0051 14.1025 17.8676 14.9725 17.8676 16.0375C17.8601 17.0875 17.0351 17.9425 16.0001 17.9725Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M13.8175 20.335C12.76 21.04 12.76 22.195 13.8175 22.9C15.0175 23.7025 16.9825 23.7025 18.1825 22.9C19.24 22.195 19.24 21.04 18.1825 20.335C16.99 19.54 15.0175 19.54 13.8175 20.335Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Clientes
+        </li>
+      </a>
+    </div>
+    <div (click)="navigateTo('purchases')">
+      <a>
+        <li
+          class="main-menu-items"
+          [class.active]="activeMenuItem === 'purchases'"
+          (click)="setActiveMenuItem('purchases')"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+            <path
+              d="M12.625 12.7526V12.0251C12.625 10.3376 13.9825 8.68013 15.67 8.52263C17.68 8.32763 19.375 9.91013 19.375 11.8826V12.9176"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M13.7501 23.5H18.2501C21.2651 23.5 21.8051 22.2925 21.9626 20.8225L22.5251 16.3225C22.7276 14.4925 22.2026 13 19.0001 13H13.0001C9.79761 13 9.27261 14.4925 9.47511 16.3225L10.0376 20.8225C10.1951 22.2925 10.7351 23.5 13.7501 23.5Z"
+              stroke="#C340AF"
+              stroke-width="1.25"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18.6216 16H18.6283"
+              stroke="#C340AF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M13.3709 16H13.3776"
+              stroke="#C340AF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Compras
+        </li>
+      </a>
+    </div>
+
+    <div (click)="navigateTo('banners')">
+      <a>
+        <li
+          class="main-menu-items"
+          [class.active]="activeMenuItem === 'banners'"
+          (click)="setActiveMenuItem('banners')"
+        >
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+            <path
+              d="M16.0149 9.18262C13.5324 9.18262 11.5149 11.2001 11.5149 13.6826V15.8501C11.5149 16.3076 11.3199 17.0051 11.0874 17.3951L10.2249 18.8276C9.69244 19.7126 10.0599 20.6951 11.0349 21.0251C14.2674 22.1051 17.7549 22.1051 20.9874 21.0251C21.8949 20.7251 22.2924 19.6526 21.7974 18.8276L20.9349 17.3951C20.7099 17.0051 20.5149 16.3076 20.5149 15.8501V13.6826C20.5149 11.2076 18.4899 9.18262 16.0149 9.18262Z"
+              stroke="#C340AF"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17.4024 9.40008C17.1699 9.33258 16.9299 9.28008 16.6824 9.25008C15.9624 9.16008 15.2724 9.21258 14.6274 9.40008C14.8449 8.84508 15.3849 8.45508 16.0149 8.45508C16.6449 8.45508 17.1849 8.84508 17.4024 9.40008Z"
+              stroke="#C340AF"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18.2651 21.2949C18.2651 22.5324 17.2526 23.5449 16.0151 23.5449C15.4001 23.5449 14.8301 23.2899 14.4251 22.8849C14.0201 22.4799 13.7651 21.9099 13.7651 21.2949"
+              stroke="#C340AF"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+            />
+          </svg>
+          Banners
+        </li>
+      </a>
+    </div>
+    <a>
+      <li class="main-menu-items">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="32" height="32" rx="6" fill="#FDEEFB" />
+          <path
+            d="M18.25 10.001H10.75V20.501C10.75 20.8988 10.908 21.2803 11.1893 21.5616C11.4706 21.8429 11.8522 22.001 12.25 22.001H18.25M19 18.251L21.25 16.001M21.25 16.001L19 13.751M21.25 16.001H13.75"
+            stroke="#C340AF"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        Salir
+      </li>
+    </a>
+  </ul>
+</div>

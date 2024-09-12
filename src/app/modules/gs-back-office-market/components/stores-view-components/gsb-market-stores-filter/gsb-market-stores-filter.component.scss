@@ -1,0 +1,102 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      gap: 10px;
+      width: 100%; 
+    }
+  }
+
+  &__field-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    min-width: 200px;
+
+    &--category {
+      mat-label {
+        font-size: 16px;
+      }
+
+      .filter__select {
+        font-size: 14px;
+      }
+
+      .filter__option {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #c340af;
+    color: white;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &--submit {
+      margin-left: 10px;
+
+      @media (max-width: 768px) {
+        width: auto;
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
+  /* Estilo del enlace "+ Agregar tienda" */
+  &__add-store {
+    color: black; 
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 0; 
+      margin-left: 20px; 
+    }
+  }
+}
+
+/* Responsivo adicional */
+@media (max-width: 768px) {
+  .filter {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__add-store {
+      margin-top: 10px;
+      align-self: flex-endd;
+    }
+  }
+}

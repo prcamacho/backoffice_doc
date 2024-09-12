@@ -1,0 +1,49 @@
+.gsb-header {
+  background-color: #fafafa;
+  @media (max-width: 955px) {
+    width: 920px;
+  }
+  @media (max-width: 720px) {
+    width: 700px;
+  }
+  @media (max-width: 400px) {
+    width: 390px;
+  }
+  &__header {
+    font-family: Inter;
+    font-size: 25px;
+    color: #3f3939;
+    padding-top: 2rem;
+    margin-left: 3rem;
+
+    @media (max-width: 1100px) {
+      margin-left: 4rem;
+      padding-bottom: 1.03rem;
+      font-size: 20px;
+    }
+    @media (max-width: 720px) {
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.3499999940395355px;
+      text-align: left;
+      margin-left: 4rem;
+      background-color: #ffffff;
+      padding-bottom: 1.25rem;
+    }
+    &-h3 {
+      font-size: 24px;
+
+      @media (max-width: 1100px) {
+        font-size: 20px;
+      }
+      @media (max-width: 720px) {
+        font-size: 17px;
+      }
+      @media (max-width: 400px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

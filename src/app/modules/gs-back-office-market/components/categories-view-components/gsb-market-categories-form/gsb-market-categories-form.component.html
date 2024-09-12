@@ -1,0 +1,53 @@
+<div class="category-form__tab-group">
+  <div class="category-form__tab-group-header">
+      <div class="category-form__tab-group-backarrow" (click)="goToCategories()">
+        <img src="../../../../../../assets/icons/back-arrow.svg" />
+      </div>
+      <div class="category-form__tab-group-title">
+        <h5>Agregar categoria</h5>
+      </div>
+  </div>
+  <mat-tab-group>
+    <mat-tab label="Información Básica">
+      <form class="category-form__basic-info" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="category-form__field">
+          <mat-label>Nombre de categoría</mat-label>
+          <input matInput [(ngModel)]="category.name" name="name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="category-form__field">
+          <mat-label>Descripción</mat-label>
+          <input
+            matInput
+            [(ngModel)]="category.description"
+            name="description"
+          />
+        </mat-form-field>
+      </form>
+    </mat-tab>
+
+    <mat-tab label="Imagen">
+      <div class="category-form__drop-zone drop-zone">
+        <p>Arrastra una imagen o haz clic para subirla</p>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <div class="category-form__buttons">
+    <button
+      mat-stroked-button
+      color="primary"
+      class="category-form__button category-form__button--cancel"
+      (click)="goToCategories()"
+    >
+      Cancelar
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      class="category-form__button category-form__button--save"
+      (click)="onSubmit()"
+    >
+      Guardar cambios
+    </button>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+<div class="categories">
+  <!-- Título de la vista -->
+  <div class="categories__header">
+    <h1 class="categories__title">Listado de categorías</h1>
+
+    <!-- Solo visible en móviles: "Ordenar" con flechas + "+Agregar" -->
+    <div class="categories__mobile-header">
+      <button class="categories__sort-btn">
+        Ordenar
+        <mat-icon>arrow_upward</mat-icon>
+        <mat-icon>arrow_downward</mat-icon>
+      </button>
+      <button class="categories__add-button--mobile">
+        + Agregar
+      </button>
+    </div>
+
+    <!-- Visible en escritorio: botón "Agregar" -->
+    <button
+      mat-raised-button
+      color="primary"
+      class="categories__add-button--desktop"
+      routerLink="/marketplace-admin/categories/new"
+    >
+      Agregar
+    </button>
+  </div>
+
+  <!-- Cuando no hay categorías -->
+  <div *ngIf="noCategories" class="categories__empty">
+    <p>No hay categorías agregadas</p>
+  </div>
+
+  <!-- Tabla de categorías -->
+  <div *ngIf="!noCategories" class="categories__table">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Categorías
+            <button class="categories__sort-btn">
+              <mat-icon>arrow_upward</mat-icon>
+              <mat-icon>arrow_downward</mat-icon>
+            </button>
+          </th>
+          <th>Cant. de tiendas</th>
+          <th>Descripción</th>
+          <th><!-- Columna para iconos de editar/borrar sin título --></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let category of categories; let i = index"
+          [class.odd]="i % 2 === 0"
+          [class.even]="i % 2 === 1"
+        >
+          <td>
+            <div class="categories__icon-container">
+              <img [src]="category.icon" class="categories__icon" />
+              <div>
+                <span class="categories__name">{{ category.name }}</span>
+                <p class="categories__description">
+                  {{ category.description | slice : 0 : 50 }}...
+                </p>
+              </div>
+            </div>
+          </td>
+          <td class="categories__stores">{{ category.stores }}</td>
+          <td class="categories__description">{{ category.description }}</td>
+          <td class="categories__actions">
+            <!-- Iconos para escritorio -->
+            <div class="categories__desktop-actions">
+              <button mat-icon-button (click)="editCategory(category.id)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button (click)="deleteCategory(category.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+
+            <!-- Menú de tres puntos para móviles -->
+            <div
+              class="categories__mobile-actions"
+              [ngClass]="{ open: isDropdownOpen(category.id) }"
+            >
+              <button mat-icon-button (click)="toggleDropdown(category.id)">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <div class="categories__dropdown">
+                <button (click)="editCategory(category.id)">Editar</button>
+                <button (click)="deleteCategory(category.id)">Eliminar</button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Paginador de la tabla -->
+    <div class="categories__paginator">
+      <p>
+        {{ getStartIndex() }}-{{ getEndIndex() }} de {{ categories.length }}
+      </p>
+      <button
+        mat-icon-button
+        (click)="previousPage()"
+        [disabled]="!hasPreviousPage()"
+      >
+        <mat-icon>keyboard_double_arrow_left</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        (click)="previousPage()"
+        [disabled]="!hasPreviousPage()"
+      >
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+
+      <span
+        *ngFor="let page of getPages()"
+        [ngClass]="{ paginator__active: currentPage === page }"
+      >
+        {{ page }}
+      </span>
+
+      <button mat-icon-button (click)="nextPage()" [disabled]="!hasNextPage()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+      <button mat-icon-button (click)="nextPage()" [disabled]="!hasNextPage()">
+        <mat-icon>keyboard_double_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
